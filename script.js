@@ -43,6 +43,7 @@ function setTheme({ theme }) {
         styles.setProperty("--theme-color-text", "#fff")
         styles.setProperty("--theme-section-one-bg", "white")
         styles.setProperty("--theme-programs-text", "snow")
+        styles.setProperty("--theme-header-bg", "#00093C")
     } else {
         styles.setProperty("--theme-bg", "#fff")
         styles.setProperty("--theme-color-hd", "darkblue")
@@ -50,6 +51,7 @@ function setTheme({ theme }) {
         styles.setProperty("--theme-color-text", "#000")
         styles.setProperty("--theme-section-one-bg", "#00093C")
         styles.setProperty("--theme-programs-text", "gray")
+        styles.setProperty("--theme-header-bg", "white")
     }
 }
 

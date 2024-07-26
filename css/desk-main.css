@@ -8,6 +8,7 @@
     --theme-color-hd: darkblue;
     --theme-bg-links: white;
     --theme-color-text: #000;
+    --theme-header-bg: white;
 
     --theme-section-one-bg: #00093C;
 
@@ -29,6 +30,24 @@ header {
     align-items: center;
     padding: 2vw 14vw;
     position: relative;
+    background: var(--theme-header-bg);
+}
+
+header a svg {
+    width: 100%;
+    height: 100%;
+}
+
+header a svg path {
+    fill: var(--theme-section-one-bg);
+}
+
+header svg path {
+    stroke: var(--theme-color-text);
+}
+
+header svg circle {
+    fill: var(--theme-color-text);
 }
 
 .header-nav {
@@ -80,7 +99,7 @@ header {
 }
 
 #selection-open:checked ~ .city-selection {
-    opacity: 1;
+    top: 9vw;
 }
 
 #selection-open:checked ~ label svg:last-child {
@@ -88,15 +107,20 @@ header {
 }
 
 .city-selection {
-    opacity: 0;
     position: absolute;
-    top: 9vw;
+    top: -15vw;
     left: 14vw;
     width: 72vw;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     flex-wrap: wrap;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
+    border: solid 5px transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, #F7941D, #27AAE1);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 15px;
 }
 
 .city-selection * {
@@ -122,27 +146,6 @@ header {
 
 .city-selection li {
     padding: 0;
-}
-
-#selection-open:checked ~ .city-selection::before {
-    position: absolute;
-    content: "";
-    inset: -5px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #F7941D, #27AAE1);
-    filter: blur(5px);
-    z-index: -1;
-}
-
-.city-selection::after {
-    position: absolute;
-    top: 0;
-    content: "";
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    z-index: 0dz;
 }
 
 header .auth a {
@@ -818,7 +821,7 @@ footer {
     align-items: center;
     flex-direction: column;
     min-height: 40vh;
-    padding: 0 14vw 4vw 10vw;
+    padding: 0 14vw 4vw 14vw;
 }
 
 .request {
@@ -827,7 +830,6 @@ footer {
     gap: 3vw;
     border-radius: 15px;
     margin-top: -15vw;
-    margin-left: 8vw;
     padding: 3vw;
     width: calc(100% - 6vw);
     position: relative;
@@ -861,7 +863,7 @@ footer {
 .request form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    gap: 1.5vw;
 }
 
 .request form label {
@@ -929,7 +931,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: 10vw;
+    margin-left: 9vw;
     padding: 0 1vw;
 }
 
@@ -955,8 +957,8 @@ footer {
 
 .request svg:last-child {
     left: -120%;
-    height: 150%;
-    width: 150%;
+    height: 140%;
+    width: 140%;
 }
 
 .footer {
@@ -970,7 +972,7 @@ footer {
     color: white;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     padding: 0;
     margin-top: 3vw;
 }
@@ -987,7 +989,7 @@ footer {
     text-decoration: none;
     color: white;
     font-weight: 400;
-    font-size: 1vw;
+    font-size: 0.8vw;
 }
 
 .contacts {
@@ -1031,4 +1033,9 @@ footer {
 
 .links a svg {
     margin-bottom: 0;
+}
+
+header a:hover,
+footer a:hover {
+    color: #27AAE1;
 }

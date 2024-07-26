@@ -1,0 +1,103 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 2vw;
+}
+
+main nav {
+    display: flex;
+    gap: 0.5vw;
+}
+
+main nav a {
+    text-decoration: none;
+    color: #828282;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.8vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+main nav a svg {
+    height: 70%;
+}
+
+main nav a svg path {
+    fill: #828282;
+}
+
+
+main section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
+    margin-bottom: 15vw;
+}
+
+main section h2 {
+    grid-column: 1 / 4;
+}
+
+.news-blocks div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 20px;
+}
+
+
+.news-blocks div:before {
+    position: absolute;
+    content: "";
+    inset: -3px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #F7941D, #27AAE1);
+    filter: blur(3px);
+    z-index: 0;
+}
+
+.news-blocks div * {
+    z-index: 1;
+    background-color: white;
+    margin: 0;
+    padding: 1.5vw 1.8vw 0 1.8vw;
+}
+
+.news-blocks div img {
+    padding: 0;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.news-blocks p {
+    font-size: 0.75vw;
+}
+
+.news-blocks h5 {
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.news-blocks a {
+    padding: 3vw 1.8vw 2vw 1.8vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-weight: 500;
+}
+
+.news-blocks a:after {
+    content: "";
+    width: 1.9vw;
+    height: 1.9vw;
+    background: url("../media/stick-arrow.svg") center no-repeat;
+}
+
